@@ -8,6 +8,6 @@
         public DateTime NgayKetThuc { get; set; }
         public decimal HocPhi { get; set; }
         public List<GiaoVien> DanhSachGiaoVien { get; set; }
-        public List<DangKy> DanhSachDangKy { get; set; }
+        /*public List<DangKy> DanhSachDangKy { get; set; }*/
     }
 }

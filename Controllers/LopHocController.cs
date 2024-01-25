@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using QuanLiGhiDanhAPI.Models;
+using QuanLiGhiDanhAPI.Models.Auth;
 using QuanLiGhiDanhAPI.Repository;
 
 namespace QuanLiGhiDanhAPI.Controllers
@@ -35,6 +37,7 @@ namespace QuanLiGhiDanhAPI.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = AppRole.Administrator)]
         public async Task<ActionResult<LopHoc>> CreateLopHoc(LopHoc lopHoc)
         {
             _datacontext.LopHoc.Add(lopHoc);

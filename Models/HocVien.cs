@@ -1,12 +1,21 @@
-﻿namespace QuanLiGhiDanhAPI.Models
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
+
+namespace QuanLiGhiDanhAPI.Models
 {
     public class HocVien
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id {  get; set; }
+        [Required]
         public string HoTen { get; set; }
-        public DateTime NgaySinh { get; set; }
-        public string DiaChi { get; set; }
-        public string SDTPhuHuynh { get; set; }
-        public string HinhAnh { get;set; }
+        [Required]
+        public string NgaySinh { get; set; }
+        [Required]
+        public string GioiTinh { get; set; }
+        [Required]
+        public string SoDienThoai { get; set; }
+        [Required]
+        public string HinhAnh { get; set; }
     }
 }

@@ -1,7 +1,11 @@
-﻿namespace QuanLiGhiDanhAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace QuanLiGhiDanhAPI.Models
 {
     public class GiaoVien
     {
+        [Key]
+        public int Id { get; set; }
         public string HoTen { get; set; }
         public DateTime NgaySinh { get; set; }
         public string CMND { get; set; }
